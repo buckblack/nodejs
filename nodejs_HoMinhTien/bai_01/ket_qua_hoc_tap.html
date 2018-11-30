@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kết quả học tập</title>
+</head>
+
+<body>
+    Điểm HK1:
+    <input type="text" id="hk1"> Điểm HK2:
+    <input type="text" id="hk2">
+    <button id="tinh">Tính</button>
+    <h1 id="kq_dtb"></h1>
+    <h1 id="kq_xep_loai"></h1>
+</body>
+<script src="js/thu_vien.js"></script>
+<script>
+    tinh.onclick = () => {
+        let diem = diemTB(Number(hk1.value), Number(hk2.value))
+        kq_dtb.innerHTML = `Điểm trung bình: ` + diem
+        kq_xep_loai.innerHTML = `Xếp loại: ` + xep_loai(diem)
+    }
+</script>
+
+</html>

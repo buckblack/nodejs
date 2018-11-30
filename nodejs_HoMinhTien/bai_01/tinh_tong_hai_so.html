@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tổng Hai số</title>
+</head>
+
+<body>
+    <h1>Tổng Hai số</h1>
+    Nhập số hạng 1: <input type="text" id="Th_1">
+    Nhập số hạng 2: <input type="text" id="Th_2">
+    
+    <button id="Th_Dong_y">Tính tổng</button>
+    <div id="Th_Kq">[Xuất tổng]</div>
+    <!--Chèn thư viện JS-->
+    <script src="js/thu_vien.js"></script>
+    <script>
+
+        Th_Dong_y.onclick = () => {
+            var a = Number(Th_1.value)
+            var b = parseFloat(Th_2.value)
+            //console.log(`${a} - ${b}`)
+            var tong=Tong_hai_so(a,b)
+            Th_Kq.innerHTML=`<strong>${tong}</strong>`
+        }
+    </script>
+</body>
+
+</html>

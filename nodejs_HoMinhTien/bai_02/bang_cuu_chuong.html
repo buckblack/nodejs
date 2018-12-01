@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" action="http://localhost:3000">
+        <input type="text" name="so_cuu_chuong" id="Th_so_cuu_chuong">
+        <input type="text" name="user" id="Th_user"> 
+        <input type="password" name="pass" id="Th_pass"> 
+        <button type="submit">In Bảng Cửu Chương</button>
+    </form>
+
+
+    <button onclick="Bang_Cuu_Chuong()">In Bảng Cửu Chương (Http)</button>
+    <script>
+        function Bang_Cuu_Chuong(){
+            var HTTP=new XMLHttpRequest()
+            HTTP.open("POST","http://localhost:3000",false)
+            var obj={
+                "so_cuu_chuong":Th_so_cuu_chuong.value,
+                "user":Th_user.value,
+                "pass":Th_pass.value,
+
+            }
+            var Chuoi_goi_JSON=JSON.stringify(obj)
+            HTTP.send(Chuoi_goi_JSON)
+            
+            console.log(HTTP.responseText)
+        }
+    </script>
+</body>
+
+</html>

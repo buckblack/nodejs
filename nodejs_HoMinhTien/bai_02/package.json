@@ -1,0 +1,14 @@
+{
+    "name": "bai_02",
+    "version": "1.0.0",
+    "description": "ung dung nodejs",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dich_vu.js"
+    },
+    "author": "TienHM",
+    "license": "ISC",
+    "dependencies": {
+        "nodemailer": "^4.7.0"
+    }
+}

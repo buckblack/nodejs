@@ -1,0 +1,20 @@
+{
+    "ma_hv": 1,
+    "ten": "Tiến",
+    "ngay_sinh": "27-02-1997",
+    "lop": "A123",
+    "gioi_tinh": 1,
+    "ket_qua": [{
+            "ma_mon": "mh01",
+            "diem": 8
+        },
+        {
+            "ma_mon": "mh02",
+            "diem": 8.5
+        },
+        {
+            "ma_mon": "mh03",
+            "diem": 9
+        }
+    ]
+}

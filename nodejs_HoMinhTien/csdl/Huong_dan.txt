@@ -1,0 +1,38 @@
+
+
+# Export to json
+mongoexport -d database_name -c collection_name -o outfile.json
+
+mongoexport -d Ban_Dien_thoai -c Dien_thoai -o D:/CSDL/Dien_thoai.json
+-------------------------------------------------------------------------
+
+# Import  file json
+mongoimport -d database_name -c collection_name outfile.json
+ 
+
+
+-------------------------------------------------------------------------
+
+mongoimport -d Ban_Dien_thoai -c Cua_hang D:\nodejs\Du_lieu\Cua_hang.json
+
+mongoimport -d Ban_Dien_thoai -c Dien_thoai D:\nodejs\Du_lieu\Dien_thoai.json
+mongoimport -d Ban_Dien_thoai -c Nguoi_dung D:\nodejs\Du_lieu\Nguoi_dung.json
+
+----------------------------------------mlab.com------------------------------
+
+----------------------------------------Server MongoDB -> mlab.com------------------------------
+
+Tao tài khoan : https://mlab.com -> active mail
+
+Tao CSDL -> Tao user  truy c?p CSDL
+
+Lay chuoi ket noi: mongodb://tienhm:minhtien96@ds123434.mlab.com:23434/ban_dien_thoai_tien
+Tao 3 collection:Dien_thoai, Nguoi_dung, Cua_hang
+Huong dan Import, Export trong Server mlab
+Cú pháp:  
+
+Import collection
+mongoimport -h ds123434.mlab.com:23434 -d ban_dien_thoai_tien -c dien_thoai -u tienhm -p minhtien96 --file D:\nodejs\nodejs_HoMinhTien\csdl\Dien_thoai.json
+Export collection
+mongoexport -h ds123434.mlab.com:23434 -d ban_dien_thoai_tien -c <collection> -u tienhm -p minhtien96 -o <output file>
+

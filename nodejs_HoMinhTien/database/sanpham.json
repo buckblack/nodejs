@@ -1,0 +1,22 @@
+[
+    {
+        "masp":"123",
+        "tensp":"iphone 8",
+        "gia_ban":15000000,
+        "loaisp":{
+            "maloai":"L1",
+            "tenloai":"iphone"
+        },
+        "hangSX":{
+            "mahang":"H1",
+            "ten_hang":"samsung"
+        },
+        "binhluan":[
+            {
+                "makh":1,
+                "tenkh":"A",
+                "noidung":"aaaaaaaaaaaaaa"
+            }
+        ]
+    }
+]

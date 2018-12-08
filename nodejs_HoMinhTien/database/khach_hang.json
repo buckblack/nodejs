@@ -1,0 +1,22 @@
+[
+    {
+        "makh": 1,
+        "tenkh": "A",
+        "hoa_don": [
+            {
+                "tongtien": 15000000,
+                "ngay_dat": "",
+                "nhanvienxuly": "",
+                "trangthai": "chưa xác nhận",
+                "chi_tiet": [
+                    {
+                        "masp": "123",
+                        "tensp": "iphone 8",
+                        "gia_ban": 15000000,
+                        "soluong": 1,
+                    }
+                ]
+            }
+        ]
+    }
+]

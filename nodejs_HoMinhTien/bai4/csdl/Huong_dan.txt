@@ -22,14 +22,14 @@ mongoimport -d Ban_Dien_thoai -c Nguoi_dung D:\nodejs\Du_lieu\Nguoi_dung.json
 
 ----------------------------------------Server MongoDB -> mlab.com------------------------------
 
-Tao tài khoan : https://mlab.com -> active mail
+Tao tï¿½i khoan : https://mlab.com -> active mail
 
 Tao CSDL -> Tao user  truy c?p CSDL
 
 Lay chuoi ket noi: mongodb://tienhm:minhtien96@ds123434.mlab.com:23434/ban_dien_thoai_tien
 Tao 3 collection:Dien_thoai, Nguoi_dung, Cua_hang
 Huong dan Import, Export trong Server mlab
-Cú pháp:  
+Cï¿½ phï¿½p:  
 
 Import collection
 mongoimport -h ds123434.mlab.com:23434 -d ban_dien_thoai_tien -c dien_thoai -u tienhm -p minhtien96 --file D:\nodejs\nodejs_HoMinhTien\csdl\Dien_thoai.json

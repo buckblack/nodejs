@@ -7,17 +7,20 @@ MongoClient.connect(url, function(err, client) {
         console.log('Không kết nối với CSDL. Error:', err);
     } else {
         console.log('Kết nối thành công', url);
-        //thao tác với csdl
-        var csdl = "ban_dien_thoai_tien"
-        var db = client.db(csdl)
-        var bang_dien_thoai = db.collection("dien_thoai")
-        var bang_cua_hang = db.collection("cua_hang")
-        bang_dien_thoai.find({}).toArray((err, dsdienthoai) => {
-            if (err) {
-                console.log(err)
+        var db = client.db("ban_dien_thoai_tien")
+        var Bang_Dien_thoai = db.collection("dien_thoai");
+        var Dieu_kien = {
+            Ma_so: "IPHONE_18"
+        }
+
+        Bang_Dien_thoai.remove(Dieu_kien, function(Loi, Ket_qua) {
+            if (Loi) {
+                console.log(Loi)
             } else {
-                console.log(dsdienthoai)
+                console.log(Ket_qua)
             }
         })
+
+
     }
-})
+});

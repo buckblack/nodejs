@@ -1,0 +1,10 @@
+//buf = Buffer();
+buf = Buffer(10);
+buf1 = Buffer.alloc(10);
+buf2 = Buffer([1,2,3,4,5,6,7,8,9999]);
+buf3 = Buffer("Chào mừng các bạn đến với NodeJS", "utf-8");
+//console.log(buf);
+console.log(buf);
+console.log(buf1);
+console.log(buf2);
+console.log(buf3);

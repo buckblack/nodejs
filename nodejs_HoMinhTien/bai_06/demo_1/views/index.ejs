@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div>
+    <% if(Math.random() > 0.5){ %>
+          Số random lớn hơn 0.5
+    <% }else{ %>
+          Số random bé hơn 0.5
+    <% } %>
+    </div>
+
+    <div><%_ chuoi_test _%></div>
+
+    <div>
+      <%% thử nghiệm %%>
+    </div>
+  </body>
+</html>

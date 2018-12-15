@@ -4,7 +4,7 @@
 
 <% include layout/nav %>
 <% include layout/thanh_trang_thai %>
-<% include thuvien/bodau%>
+<% include ../public/js/functions %>
 
 <!-- breadcrumbs -->
 
@@ -61,13 +61,13 @@
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="#"><img title=" " height="150px" width="200px" alt=" " src="/images/dienthoai/<%= sp.Ma_so %>.png"></a>
-												<div style="height:80px"><p><%= sp.Ten%></p></div>
+												<a href="/chi-tiet/<%=xoa_dau_tieng_viet(sp.Ten)%>/<%=sp.Ma_so%>"><img title=" " height="150px" width="200px" alt=" " src="/images/dienthoai/<%= sp.Ma_so %>.png"></a>
+												<div style="height:50px"><p><%= sp.Ten%></p></div>
 
 													<h4><%= sp.Don_gia_Ban.toLocaleString()%> VNĐ</h4>
 											</div>
 											<div class="text-center">
-													<a class="nav-link " href="/<%=xoa_dau_tieng_viet(sp.Ten)%>/<%=sp.Ma_so%>">
+													<a class="nav-link " href="/chi-tiet/<%=xoa_dau_tieng_viet(sp.Ten)%>/<%=sp.Ma_so%>">
 															<i class="fa fa-info-circle"></i> Chi tiết
 													</a>
 											</div>

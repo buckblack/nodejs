@@ -11,7 +11,34 @@ var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 
 var app = express();
+//khởi tạo thư viện session-client: đăng nhập quản trị
+app.use(session({
+    cookieName: 'Nguoi_dung',
+    secret: '2eca38b4-28d1-11e7-93ae-92361f002671',
+    duration: 60 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000,
+    httpOnly: true,
+    secure: true,
+    ephemeral: true
+}));
 
+//khởi tạo thư viện session-client: Giỏ hàng
+app.use(session({
+    cookieName: 'gio_hang',
+    secret: '2bca65b4-28b1-12e7-93ae-92361f002739',
+    duration: 60 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000,
+    httpOnly: true,
+    secure: true,
+    ephemeral: true
+}));
+
+
+app.use(function(req, res, next) {
+    res.locals.Nguoi_dung = req.Nguoi_dung.Nguoi_dung;
+    res.locals.Gio_hang = req.gio_hang.Gio_hang;
+    next();
+})
 
 
 // default options
@@ -58,34 +85,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 
-//khởi tạo thư viện session-client: đăng nhập quản trị
-app.use(session({
-    cookieName: 'Nguoi_dung',
-    secret: '2eca38b4-28d1-11e7-93ae-92361f002671',
-    duration: 60 * 60 * 1000,
-    activeDuration: 5 * 60 * 1000,
-    httpOnly: true,
-    secure: true,
-    ephemeral: true
-}));
 
-//khởi tạo thư viện session-client: Giỏ hàng
-app.use(session({
-    cookieName: 'gio_hang',
-    secret: '2bca65b4-28b1-12e7-93ae-92361f002739',
-    duration: 60 * 60 * 1000,
-    activeDuration: 5 * 60 * 1000,
-    httpOnly: true,
-    secure: true,
-    ephemeral: true
-}));
-
-
-app.use(function(req, res, next) {
-    res.locals.Nguoi_dung = req.Nguoi_dung.Nguoi_dung;
-    res.locals.Gio_hang = req.gio_hang.Gio_hang;
-    next();
-})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

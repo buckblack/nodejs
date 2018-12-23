@@ -139,4 +139,11 @@ router.delete('/xoa-dien-thoai', function(req, res) {
     res.send(JSON.stringify({ ok: "OK" }))
 })
 
+router.post('/quan-tri', function(req, res, next) {
+    //res.send("Login")
+    var gt_tim = req.body.Th_gia_tri_tim
+    var Danh_sach_Dien_thoai = du_lieu.dien_thoai.filter(x => x.Ten.toLowerCase().includes(gt_tim.toLowerCase()))
+    res.render("admin/quan_tri", { tieude: "Quản trị", Nguoi_dung: req.Nguoi_dung.Nguoi_dung, Danh_sach_Dien_thoai: Danh_sach_Dien_thoai })
+});
+
 module.exports = router;

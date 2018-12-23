@@ -11,7 +11,11 @@
 
     </div>
     <div class="container-fluid">
-        <div class="h4"><a href="/admin/them-dien-thoai" class="btn btn-sm btn-outline-danger">Thêm Điện thoại</a></div>
+        <div class="h4"><a href="/admin/them-dien-thoai" class="btn btn-sm btn-outline-danger">Thêm Điện thoại</a>
+            <form action="/admin/quan-tri" method="POST" onsubmit="return Kiem_tra_gia_tri_Tim()">
+                <input type="text" required id="Th_gia_tri_tim" name="Th_gia_tri_tim" /><button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
         <div class="col-md-12 border">
             <h2 class="text-primary">Danh sách Điện thoại</h2>
 
@@ -164,5 +168,16 @@
             Th_Chi_tiet.innerHTML = html
             Th_Modal.click()
 
+        }
+
+
+        function Kiem_tra_gia_tri_Tim() {
+            var Hop_le = true
+            if (Th_gia_tri_tim.value.trim() == "") {
+                alert('Nhập giá trị tìm')
+                Th_gia_tri_tim.focus()
+                Hop_le = false
+            }
+            return Hop_le
         }
     </script>

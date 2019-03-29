@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var xl_mongo = require('../public/js/XL_LUU_TRU_MONGO')
+
     //chuyển sang app.js
     /*var du_lieu = {}
     var pro_dien_thoai = xl_mongo.ds_doi_tuong('dien_thoai')
@@ -25,6 +26,18 @@ var xl_mongo = require('../public/js/XL_LUU_TRU_MONGO')
 router.get('/', function(req, res, next) {
     //res.send(JSON.stringify(du_lieu.cua_hang))
     res.render('trangchu', { tieude: 'Trang chủ', ds_dien_thoai: du_lieu.dien_thoai, thuong_hieu: du_lieu.thuong_hieu });
+});
+
+router.get('/aaa', function(req, res, next) {
+    //res.send(JSON.stringify(du_lieu.cua_hang))
+    res.send(du_lieu.cua_hang);
+});
+router.post('/aaa', function(req, res, next) {
+    //res.send(JSON.stringify(du_lieu.cua_hang))
+    //console.log(req.body);
+    
+    //kq={'aaa':req.body}
+    res.json(req.body);
 });
 
 router.get('/dienthoai', function(req, res, next) {
